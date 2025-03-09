@@ -7,7 +7,6 @@ import { PageComponent } from './Components/CForStudents/page/page.component';
 import { CDetailsComponent } from './Components/CForStudents/cdetails/cdetails.component';
 import { MainComponent } from './main/main.component';
 import { ManageLessonComponent } from './Components/manageLessons/manageLeson/cdetails.component';
-
 export const routes: Routes = [
     { path: '', component: MainComponent },
     { path: 'courses', component: CoursesPageComponent },
