@@ -1,15 +1,55 @@
-<form #form1="ngForm" (ngSubmit)="onSubmit(form1)">
-    <label for="useremail">Useremail:</label>
-    <input #name="ngModel" id="useremail" [(ngModel)]="useremail" name="useremail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" >
-    @if(name.touched && name.hasError('required')){
-        <small>email is required</small>
-    }
-    @if(name.touched && name.hasError('pattern')){
-        <small>email not valid</small>
-    }
-    
-    <label for="password">password:</label>
-    <input id="password" [(ngModel)]="password" name="password" required>
+<div class="main">
+   <mat-card class="father-card">
+    <mat-card-content>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" type="text" />
+          @if(registerForm.get('name')?.invalid && registerForm.get('name')?.touched){
+            <mat-error >
+                שם נדרש.
+              </mat-error>
+          }
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="email" />
+          @if(registerForm.get('email')?.invalid && registerForm.get('email')?.touched){
+            <mat-error >
+                כתובת דוא"ל לא תקינה.
+              </mat-error>
+          }
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" type="password" />
+          @if(registerForm.get('password')?.invalid && registerForm.get('password')?.touched){
+            <mat-error >
+                סיסמה נדרשת.
+              </mat-error>
+          }
 
-    <button type="submit" [disabled]="form1.invalid">Submit</button>
-   </form>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Role</mat-label>
+          <mat-select formControlName="role">
+            <mat-option value="">בחר תפקיד</mat-option>
+            <mat-option value="student">סטודנט</mat-option>
+            <mat-option value="teacher">מורה</mat-option>
+            <mat-option value="admin">אדמין</mat-option>
+          </mat-select>
+          @if(registerForm.get('role')?.invalid && registerForm.get('role')?.touched){
+            <mat-error >
+                תפקיד נדרש.
+              </mat-error>
+          }
+        </mat-form-field>
+  
+        <button mat-raised-button type="submit" [disabled]="registerForm.invalid">הרשם</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

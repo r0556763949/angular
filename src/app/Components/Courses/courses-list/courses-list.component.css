@@ -1,0 +1,40 @@
+.courses-container {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  
+  .course-card {
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex; /* שימוש ב-flexbox כדי להבטיח שהתוכן בשורה אחת */
+    align-items: center; /* פיזור התוכן באופן שווה בין הכותרת לאייקונים */
+  }
+  
+  .course-card:hover {
+    transform: scale(1.05);
+  }
+  .selectedCourse-card{
+    align-items: center;
+    margin: 10px;
+    width: 500px;
+  }
+  .details-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; /* רווח בין הקומפוננטות */
+}
+#icons div{
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* מרכז את התוכן אופקית */
+  align-items: center;
+  background-color:  rgb(249, 95, 226) ;
+}
+#icons{
+  display: flex;
+  justify-content: center;
+}
+  

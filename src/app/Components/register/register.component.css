@@ -1,0 +1,13 @@
+.father-card {
+    display: flex; /* מאפשר שימוש ב-Flexbox */
+    justify-content: center; /* מרכז את התוכן אופקית */
+    align-items: center; /* מרכז את התוכן אנכית */
+    height: 400px; 
+    width: 300px;/* גובה של 100% מהגובה של חלון התצוגה */
+}
+.main{
+    display: flex; /* מאפשר שימוש ב-Flexbox */
+    justify-content: center; /* מרכז את התוכן אופקית */
+    align-items: center; /* מרכז את התוכן אנכית */
+    height: 100vh; /* גובה של 100% מהגובה של חלון התצוגה */ 
+}

@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* מרכז את התוכן מאוזן */
+    /* justify-content: center; מרכז את התוכן אנכית (אם יש גובה) */
+    height: 100vh; /* אם תרצה למרכז את התוכן בעמוד שלם */
+  }
+  .full-width {
+    width: 100%; /* ברוחב של כל העמוד */
+  }
+  
+  button, app-create-course {
+    margin: 10px 0; /* רווח בין המרכיבים */
+  }
+  button{
+    background-color: rgb(249, 95, 226); /* צבע רקע ורוד */
+    color: white;
+  }
+

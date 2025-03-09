@@ -1,0 +1,44 @@
+<div id="icons">
+  <div>lessons:<mat-icon>view_list</mat-icon></div>
+  <div>update: <mat-icon>change_circle</mat-icon></div>
+  <div>delete: <mat-icon >delete</mat-icon></div>
+  <div> details: <mat-icon>playlist_add</mat-icon></div>
+</div>
+<div class="courses-container" fxLayout="row" fxLayoutGap="10px" fxLayoutWrap>
+    @for (item of courses$ | async; track item.id){
+      <mat-card class="course-card"> 
+                  <mat-card-title>{{ item.title}}</mat-card-title>
+                  <mat-card-content class="icon-container">
+                    <button mat-icon-button (click)="viewCourseDetails(item.id)">
+                      <mat-icon>playlist_add</mat-icon>
+                    </button>
+                      <button mat-icon-button (click)="Delete(item.id)">
+                        <mat-icon >delete</mat-icon>
+                      </button>
+                      <button mat-icon-button (click)="Update(item.id)">
+                        <mat-icon>change_circle</mat-icon>
+                      </button>
+                      <button mat-icon-button (click)="ManageLessons(item.id)">
+                        <mat-icon>view_list</mat-icon>
+                      </button>
+                    </mat-card-content>
+                  </mat-card>
+              }
+
+ 
+</div>
+<div class="details-container">
+@if(selectedCourse)
+{
+    <mat-card class="selectedCourse-card">
+        <mat-card-title>{{selectedCourse.title }}</mat-card-title>
+        <mat-card-content> 
+            <p>{{ selectedCourse.description }}</p>
+            </mat-card-content>
+            <button (click)="changeSelectedCourse()">close</button>
+    </mat-card>
+}
+@if(selectForUpdate)
+{
+  <app-course-update (afterSubmit)="updateSubmit()" [input]  = "selectForUpdate" ></app-course-update>
+}

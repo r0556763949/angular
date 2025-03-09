@@ -1,0 +1,16 @@
+h1.mat-dialog-title {
+    color: green;
+  }
+  
+  .mat-dialog-content {
+    text-align: center;
+  }
+  
+  button.mat-button {
+    background-color: green;
+    color: white;
+  }
+#contain{
+    background-color: rgb(178, 239, 181);
+    padding: 20px;
+}

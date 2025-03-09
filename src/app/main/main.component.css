@@ -1,0 +1,18 @@
+.spacer {
+    flex: 1;
+  }
+.custom-toolbar {
+    height: 70px; /* גובה 100 פיקסלים */
+    width: 100%; /* רוחב מלא */
+    color: white;
+}
+.custom-toolbar span{
+    margin: 15px;
+}
+.centered-buttons {
+    display: flex; /* מאפשר שימוש ב-Flexbox */
+    justify-content: center; /* מרכז את התוכן אופקית */
+    align-items: center; /* מרכז את התוכן אנכית */
+    height: 100vh; /* גובה של 100% מהגובה של חלון התצוגה */
+}
+

@@ -1,0 +1,12 @@
+<div id="contain">
+<h1 mat-dialog-title>
+  <mat-icon>check_circle</mat-icon>
+  Success
+</h1>
+<div mat-dialog-content style="text-align: center;">
+  <p>{{ data.message }}</p>
+</div>
+<div mat-dialog-actions style="justify-content: center;">
+  <button mat-button (click)="onClose()" style="background-color: green; color: white;">Close</button>
+</div>
+</div>

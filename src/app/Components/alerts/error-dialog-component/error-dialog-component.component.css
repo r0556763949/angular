@@ -1,0 +1,16 @@
+mat-icon{
+    color: red;
+}
+.mat-dialog-container {
+    background-color: lightcoral; /* צבע רקע אדום בהיר */
+  }
+  
+  .mat-button {
+    background-color: darkred; /* צבע כפתור אדום כהה */
+    color: white; /* צבע טקסט לבן */
+  }
+  #contain{
+    background-color: rgb(246, 125, 125);
+    padding: 20px;
+}
+  

@@ -1,0 +1,16 @@
+<div class="wrapper"><div class="courses-container" fxLayout="row" fxLayoutGap="10px" fxLayoutWrap>
+    @for (item of courses$ | async; track item.id){
+      <mat-card class="course-card" (click)="viewCourseDetails(item.id)"> 
+                  <mat-card-title>{{ item.title }}</mat-card-title>
+                  <mat-card-content class="icon-container">
+                      <button  (click)="Leave(item.id);$event.stopPropagation()" mat-button>
+                        Leave
+                      </button>
+                      <button (click)="Join(item.id); $event.stopPropagation()" mat-button>
+                        Join
+                      </button>
+                    </mat-card-content>
+                  </mat-card>
+              }
+</div>
+</div>

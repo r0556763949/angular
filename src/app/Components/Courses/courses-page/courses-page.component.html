@@ -1,0 +1,9 @@
+<div class="container">
+<app-courses-list class="full-width"></app-courses-list>
+<button (click)="showCreateCourse = true" mat-button>
+    Create New Course
+  </button>
+  @if(showCreateCourse){
+    <app-create-course (courseCreated)="onCourseCreated()" ></app-create-course>
+  }
+  </div>

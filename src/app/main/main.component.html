@@ -1,0 +1,17 @@
+
+    <mat-toolbar class="custom-toolbar" [ngStyle]="{'background-color': textColor}">
+      <span>My Courses</span>
+      <button mat-button (click)="textColor = getRandomColor()" [ngStyle]="{'background-color': 'white'}">Change Color</button>
+      <span class="spacer"></span>
+      @if(!(authState$ | async)?.userId){
+        <button routerLink="register" mat-button>Register</button>
+        <button routerLink="login" mat-button>Login</button>
+
+      }
+      @else{
+      <button mat-button routerLink="myCourses">Students</button>
+      <button mat-button routerLink="courses">Management</button>
+
+      }
+    </mat-toolbar>
+  

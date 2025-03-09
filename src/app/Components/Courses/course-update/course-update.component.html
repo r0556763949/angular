@@ -1,0 +1,19 @@
+
+<mat-card class="father-catd">
+    <mat-card-content> 
+   <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput id="title" [(ngModel)]="title" name="title" required>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <input matInput id="description" [(ngModel)]="description" name="description" required>
+    </mat-form-field>
+  
+    <button mat-raised-button type="submit" [disabled]="form.invalid">Submit</button>
+  </form>
+  </mat-card-content>
+</mat-card>
+
