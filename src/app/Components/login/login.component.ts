@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { login, loginSuccess, loginFailure } from '../../services/auth/auth.actions';
+import {  loginSuccess, loginFailure } from '../../services/auth/auth.actions';
 import { AppState } from '../../app.state';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';

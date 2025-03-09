@@ -9,7 +9,7 @@ import { Store } from '@ngrx/store';
 import { AppState } from '../../../app.state';
 import { AuthState } from '../../../services/auth/auth.reducer';
 import { selectAuthState } from '../../../services/auth/auth.selectors';
-import { ActivatedRoute, Router } from '@angular/router';
+import {  Router } from '@angular/router';
 import { CDetailsComponent } from '../cdetails/cdetails.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ErrorDialogComponent } from '../../alerts/error-dialog-component/error-dialog-component.component';

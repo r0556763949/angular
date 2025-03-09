@@ -16,7 +16,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
-//import { MatAvatarModule } from '@angular/material/avatar';
 
 @Component({
   selector: 'app-main',
@@ -30,7 +29,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatMenuModule,
     MatIconModule,
     MatTooltipModule,
-    // MatAvatarModule,
     RegisterComponent,
     MatButtonModule,
     LoginComponent],

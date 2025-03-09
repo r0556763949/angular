@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { register, registerSuccess, registerFailure } from '../../services/auth/auth.actions';
+import { registerSuccess, registerFailure } from '../../services/auth/auth.actions';
 import { AppState } from '../../app.state';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -10,7 +10,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { AuthService } from '../../services/auth.service'; // ייבוא של AuthService
-import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { SuccessDialogComponent } from '../alerts/success-dialog/success-dialog.component';

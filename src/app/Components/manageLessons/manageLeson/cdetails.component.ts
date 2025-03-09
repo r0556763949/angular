@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable, catchError, of } from 'rxjs';
 import { LessonsService } from '../../../services/lessons.service';
-import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -106,5 +106,4 @@ loadLessons(): void {
     }
   );
 }
-
 }
